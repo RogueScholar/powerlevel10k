@@ -1,8 +1,3 @@
-emulate -L zsh
-setopt noaliases
-
-() {
-setopt extended_glob no_prompt_{bang,subst} prompt_percent typeset_silent
 zmodload zsh/langinfo
 if [[ ${langinfo[CODESET]:-} != (utf|UTF)(-|)8 ]]; then
   local LC_ALL=${${(@M)$(locale -a):#*.(utf|UTF)(-|)8}[1]:-en_US.UTF-8}
@@ -360,9 +355,9 @@ function install_font() {
       print -P " %2FOK%f"
       run_command "Updating %BiTerm2%b settings cache" /usr/bin/defaults read com.googlecode.iterm2
       clear
-      print -P "%2FMeslo Nerd Font%f successfully installed."
+      flowing +c "%2FMeslo Nerd Font%f" successfully installed.
       print -P ""
-      print -P "Please %Brestart iTerm2%b for the changes to take effect."
+      flowing +c Please "%Brestart iTerm2%b" for the changes to take effect.
       print -P ""
       while true; do
         flowing +c -i 5 "  1. Click" "%BiTerm2 → Quit iTerm2%b" or press "%B⌘ Q%b."
@@ -377,7 +372,7 @@ function install_font() {
         fi
         print -P ""
         print -P ""
-        print -P "It's important to %Brestart iTerm2%b for the changes to take effect."
+        flowing +c "It's" important to "%Brestart iTerm2%b" for the changes to take effect.
         print -P ""
       done
     ;;
@@ -1531,23 +1526,12 @@ function generate_config() {
     sub MODE $POWERLEVEL9K_MODE
 
     if (( cap_narrow_icons )); then
-      uncomment 'typeset -g POWERLEVEL9K_VISUAL_IDENTIFIER_EXPANSION'
       sub VISUAL_IDENTIFIER_EXPANSION "'\${P9K_VISUAL_IDENTIFIER// }'"
-      sub BACKGROUND_JOBS_VISUAL_IDENTIFIER_EXPANSION "'\${P9K_VISUAL_IDENTIFIER// }'"
-      sub VPN_IP_VISUAL_IDENTIFIER_EXPANSION "'\${P9K_VISUAL_IDENTIFIER// }'"
-      sub VIM_SHELL_VISUAL_IDENTIFIER_EXPANSION "'\${P9K_VISUAL_IDENTIFIER// }'"
-      sub MIDNIGHT_COMMANDER_VISUAL_IDENTIFIER_EXPANSION "'\${P9K_VISUAL_IDENTIFIER// }'"
       if [[ $style == lean_8colors ]]; then
         sub OS_ICON_CONTENT_EXPANSION "'\${P9K_CONTENT// }'"
       else
         sub OS_ICON_CONTENT_EXPANSION "'%B\${P9K_CONTENT// }'"
       fi
-    else
-      sub VISUAL_IDENTIFIER_EXPANSION "'\${P9K_VISUAL_IDENTIFIER}'"
-      sub BACKGROUND_JOBS_VISUAL_IDENTIFIER_EXPANSION "'\${P9K_VISUAL_IDENTIFIER}'"
-      sub VPN_IP_VISUAL_IDENTIFIER_EXPANSION "'\${P9K_VISUAL_IDENTIFIER}'"
-      sub VIM_SHELL_VISUAL_IDENTIFIER_EXPANSION "'\${P9K_VISUAL_IDENTIFIER}'"
-      sub MIDNIGHT_COMMANDER_VISUAL_IDENTIFIER_EXPANSION "'\${P9K_VISUAL_IDENTIFIER}'"
     fi
 
     if [[ $POWERLEVEL9K_MODE == compatible ]]; then
@@ -1569,6 +1553,7 @@ function generate_config() {
       sub AZURE_VISUAL_IDENTIFIER_EXPANSION "'az'"
       uncomment 'typeset -g POWERLEVEL9K_AWS_EB_ENV_VISUAL_IDENTIFIER_EXPANSION'
       sub AWS_EB_ENV_VISUAL_IDENTIFIER_EXPANSION "'eb'"
+      uncomment 'typeset -g POWERLEVEL9K_BACKGROUND_JOBS_VISUAL_IDENTIFIER_EXPANSION'
       sub BACKGROUND_JOBS_VISUAL_IDENTIFIER_EXPANSION "'≡'"
     fi
 
@@ -1902,5 +1887,3 @@ change_zshrc || return
 print -rP ""
 flowing +c File feature requests and bug reports at "$(href https://github.com/romkatv/powerlevel10k/issues)."
 print -rP ""
-
-} "$@"

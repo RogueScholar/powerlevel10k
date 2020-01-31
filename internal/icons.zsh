@@ -123,6 +123,8 @@ function _p9k_init_icons() {
         LUA_ICON                       'lua'
         PERL_ICON                      'perl'
         NNN_ICON                       'nnn'
+        TIMEWARRIOR_ICON               'tw'
+        NIX_SHELL_ICON                 'nix'
       )
     ;;
     'awesome-fontconfig')
@@ -233,6 +235,8 @@ function _p9k_init_icons() {
         LUA_ICON                       'lua'
         PERL_ICON                      'perl'
         NNN_ICON                       'nnn'
+        TIMEWARRIOR_ICON               'tw'
+        NIX_SHELL_ICON                 'nix'
       )
     ;;
     'awesome-mapped-fontconfig')
@@ -347,6 +351,8 @@ function _p9k_init_icons() {
         LUA_ICON                       'lua'
         PERL_ICON                      'perl'
         NNN_ICON                       'nnn'
+        TIMEWARRIOR_ICON               'tw'
+        NIX_SHELL_ICON                 'nix'
       )
     ;;
     'nerdfont-complete'|'nerdfont-fontconfig')
@@ -458,6 +464,8 @@ function _p9k_init_icons() {
         LUA_ICON                       '\uE620'               # 
         PERL_ICON                      '\uE769'               # 
         NNN_ICON                       'nnn'
+        TIMEWARRIOR_ICON               '\uF49B'               # 
+        NIX_SHELL_ICON                 '\uF313'               # 
       )
     ;;
     *)
@@ -568,6 +576,8 @@ function _p9k_init_icons() {
         LUA_ICON                       'lua'
         PERL_ICON                      'perl'
         NNN_ICON                       'nnn'
+        TIMEWARRIOR_ICON               'tw'
+        NIX_SHELL_ICON                 'nix'
       )
     ;;
   esac
@@ -590,8 +600,6 @@ function _p9k_init_icons() {
 
 # Sadly, this is a part of public API. Its use is emphatically discouraged.
 function _p9k_print_icon() {
-  emulate -L zsh
-  setopt no_hist_expand extended_glob no_prompt_bang prompt_{percent,subst}
   _p9k_init_icons
   [[ -z $_p9k_locale ]] || local LC_ALL=$_p9k_locale
   local icon_name=$1
@@ -609,8 +617,6 @@ function _p9k_print_icon() {
 #                 otherwise "print_icon" is used, which takes the users
 #                 overrides into account.
 function _p9k_get_icon_names() {
-  emulate -L zsh
-  setopt no_hist_expand extended_glob no_prompt_bang prompt_{percent,subst}
   _p9k_init_icons
   [[ -z $_p9k_locale ]] || local LC_ALL=$_p9k_locale
   # Iterate over a ordered list of keys of the icons array
