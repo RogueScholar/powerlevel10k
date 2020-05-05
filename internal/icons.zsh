@@ -90,7 +90,7 @@ function _p9k_init_icons() {
         VCS_TAG_ICON                   '\uE817 '              # 
         VCS_BOOKMARK_ICON              '\uE87B'               # 
         VCS_COMMIT_ICON                '\uE821 '              # 
-        VCS_BRANCH_ICON                '\uE220 '              # 
+        VCS_BRANCH_ICON                '\uE220 '              # �
         VCS_REMOTE_BRANCH_ICON         '\u2192'               # →
         VCS_LOADING_ICON               ''
         VCS_GIT_ICON                   '\uE20E '              # 
@@ -162,7 +162,7 @@ function _p9k_init_icons() {
         TEST_ICON                      '\uF291'$s             # 
         TODO_ICON                      '\u2611'               # ☑
         BATTERY_ICON                   '\U1F50B'              # 🔋
-        DISK_ICON                      '\uF0A0 '              # 
+        DISK_ICON                      '\uF0A0 '              # �
         OK_ICON                        '\u2714'               # ✔
         FAIL_ICON                      '\u2718'               # ✘
         SYMFONY_ICON                   'SF'
@@ -234,7 +234,7 @@ function _p9k_init_icons() {
         NORDVPN_ICON                   '\UF023'               # 
         EXECUTION_TIME_ICON            '\uF253'$s             # 
         SSH_ICON                       'ssh'
-        VPN_ICON                       '\uF023' 
+        VPN_ICON                       '\uF023'
         KUBERNETES_ICON                '\U2388'               # ⎈
         DROPBOX_ICON                   '\UF16B'$s             # 
         DATE_ICON                      '\uF073 '              # 
@@ -416,7 +416,7 @@ function _p9k_init_icons() {
         TEST_ICON                      '\uF188'$s             # 
         TODO_ICON                      '\u2611'               # ☑
         BATTERY_ICON                   '\UF240 '              # 
-        DISK_ICON                      '\uF0A0'$s             # 
+        DISK_ICON                      '\uF0A0'$s             # �
         OK_ICON                        '\uF00C'$s             # 
         FAIL_ICON                      '\uF00D'               # 
         SYMFONY_ICON                   '\uE757'               # 
@@ -506,11 +506,11 @@ function _p9k_init_icons() {
         DIRENV_ICON                    '\u25BC'               # ▼
         FLUTTER_ICON                   'F'
         GCLOUD_ICON                    '\uF7B7'               # 
-        LUA_ICON                       '\uE620'               # 
+        LUA_ICON                       '\uE620'               # �
         PERL_ICON                      '\uE769'               # 
         NNN_ICON                       'nnn'
         TIMEWARRIOR_ICON               '\uF49B'               # 
-        TASKWARRIOR_ICON               '\uF4A0 '              # 
+        TASKWARRIOR_ICON               '\uF4A0 '              # �
         NIX_SHELL_ICON                 '\uF313 '              # 
         WIFI_ICON                      '\uF1EB '              # 
         ERLANG_ICON                    '\uE7B1 '              # 
@@ -664,7 +664,7 @@ function _p9k_init_icons() {
         TEST_ICON                      ''
         TODO_ICON                      '\u2206'               # ∆
         BATTERY_ICON                   '\U1F50B'              # 🔋
-        DISK_ICON                      'hdd' 
+        DISK_ICON                      'hdd'
         OK_ICON                        '\u2714'               # ✔
         FAIL_ICON                      '\u2718'               # ✘
         SYMFONY_ICON                   'SF'
@@ -717,7 +717,7 @@ function _p9k_init_icons() {
         VCS_TAG_ICON                   ''
         VCS_BOOKMARK_ICON              '\u263F'               # ☿
         VCS_COMMIT_ICON                ''
-        VCS_BRANCH_ICON                '\uE0A0 '              # 
+        VCS_BRANCH_ICON                '\uE0A0 '              # �
         VCS_REMOTE_BRANCH_ICON         '\u2192'               # →
         VCS_LOADING_ICON               ''
         VCS_GIT_ICON                   ''
